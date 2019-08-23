@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -18,4 +18,15 @@
   </li>
 </ul>
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
+<div>
+  <h1>My Quotes</h1>
+
+  <ul>
+    <li *ngFor='let quote of quotes'>
+      {{quote.name}}
+
+    </li>
+  </ul>
+  <p *ngIf= 'quotes.length>0'>These are your quotes</p>
+</div>
