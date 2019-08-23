@@ -7,8 +7,8 @@ import { Quote } from './quote';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Quotes';
-  quotes:Quote[]=[
-    {id:1, name:"First quote"},
-  ]
+  // title = 'Quotes';
+  // quotes:Quote[]=[
+  //   {id:1, name:"First quote"},
+  // ]
 }

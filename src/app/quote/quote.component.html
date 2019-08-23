@@ -1,1 +1,12 @@
-<p>quote works!</p>
+<!-- <p>quote works!</p> -->
+<div>
+    <h1>My Quotes</h1>
+  
+    <ul>
+      <li *ngFor='let quote of quotes'>
+        {{quote.name}}
+  
+      </li>
+    </ul>
+    <p *ngIf= 'quotes.length>0'>These are your quotes</p>
+  </div>
