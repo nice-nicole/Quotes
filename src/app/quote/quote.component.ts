@@ -9,10 +9,20 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes: Quote[]=[
-    new Quote(1, "First quote", "No matter what happens, move on",new Date(2019, 7, 23)),
+    new Quote(1, "Nicole", "No matter what happens, move on",new Date(2019, 7, 23)),
+    new Quote(2, "Nice", "No matter what happens, move on",new Date(2019, 7, 23)),
   ];
   toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
+  deleteQuote(isDelete, index){
+    if(isDelete){
+      let ToBeDeleted = confirm(`Do you want to delete ${this.quotes[index].name}?`)
+
+      if (ToBeDeleted){
+        this.quotes.splice(index,1)
+      }
+    }
   }
   constructor() { }
 
