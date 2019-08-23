@@ -9,8 +9,11 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes: Quote[]=[
-    {id:1, name:"First quote", description:"No matter what happens, move on"},
-  ]
+    new Quote(1, "First quote", "No matter what happens, move on",new Date(2019, 7, 23)),
+  ];
+  toggleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
   constructor() { }
 
   ngOnInit() {

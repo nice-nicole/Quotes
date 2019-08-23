@@ -3,10 +3,11 @@
     <h1>My Quotes</h1>
   
     <ul>
-      <li *ngFor='let quote of quotes'>
-        {{quote.name}}
-  
-      </li>
+      <div *ngFor='let quote of quotes; let i = index'>
+        <li>{{quote.name}} due on {{quote.completeDate|date}}</li>
+        <button (click)='toggleDetails(i)'>Toggle Details</button>
+        <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'></app-quote-detail>
+      </div>
     </ul>
     <p *ngIf= 'quotes.length>0'>These are your quotes</p>
   </div>
