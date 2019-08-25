@@ -1,11 +1,4 @@
 <p>Author:{{quote.author}}</p>
-<p>posted by {{quote.name}}</p>
-<!-- <p>{{quote.upvote}}</p> -->
-<!-- <p>{{quote.downvote}}</p> -->
+<p>posted {{quote.completeDate|timeCount}} days ago,by {{quote.name}}</p>
 
-<!-- <p>{{quote.upvote}}</p> -->
-<!-- <p>{{quote.downvote}}</p> -->
-<button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
-<!-- <button (click)= 'quoteLike()' class="btn btn-danger">Upvote</button>
-<button (click)= 'quoteUnlike()' class="btn btn-danger">Downvote</button> -->
-
+<button (click)='quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
