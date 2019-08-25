@@ -5,7 +5,7 @@
 body{
     font-family: 'Lobster', cursive;
     /* background-color:#8B4513; */
-    color: #8B4513;
+    /* color: #8B4513; */
 }
 input[type=text]{
     border: none;
@@ -24,9 +24,7 @@ input[type=text]{
 .title{
     color:#8B4513;
 }
-.title>h1{
-    /* margin-bottom: -10%; */
-    width:30%;
-    /* background-color: white; */
-    margin:0 auto;
+.title>img{
+    height: 5%;
 }
+
