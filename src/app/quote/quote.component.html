@@ -11,8 +11,8 @@
                     
                     <p appHighLight *ngIf="highestUpvote()===quote.upvote && quote.upvote>0">{{quote.quote}}</p>
                     <p  *ngIf="highestUpvote()!==quote.upvote || quote.upvote===0">{{quote.quote}}</p>
-                    <button (click)='quoteLike(i)' class="btn btn-outline-success">Upvote</button>
-                    <button (click)='quoteUnlike(i)' class="btn btn-outline-primary">Downvote</button>
+                    <button (click)='quoteLike(i)' class="btn btn-outline-success">Upvote {{quote.upvote}}</button>
+                    <button (click)='quoteUnlike(i)' class="btn btn-outline-primary">Downvote {{quote.downvote}}</button>
                     <button (click)='toggleDetails(i)' class="btn btn-outline-warning">Toggle Details</button>
                     <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isDelete)='deleteQuote($event, i)'>
                     </app-quote-detail>
