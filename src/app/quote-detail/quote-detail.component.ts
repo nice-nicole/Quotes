@@ -17,16 +17,16 @@ export class QuoteDetailComponent implements OnInit {
     this.isDelete.emit(toDelete);
   }
 
-  numberOfLikes=0;
-  numberOfDislikes=0;
+  // numberOfLikes=0;
+  // numberOfDislikes=0;
 
 
-  quoteLike(){
-    this.numberOfLikes++;
-  }
-  quoteUnlike(){
-    this.numberOfDislikes++;
-  }
+  // quoteLike(){
+  //   this.numberOfLikes++;
+  // }
+  // quoteUnlike(){
+  //   this.numberOfDislikes++;
+  // }
   constructor() { }
 
   ngOnInit() {

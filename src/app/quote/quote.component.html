@@ -7,18 +7,25 @@
         <div class="col-md-6">
             <div *ngFor='let quote of quotes; let i = index'>
                 <div>
-                    <h4 id={{i}}>{{quote.name}} due on {{quote.completeDate|date}}</h4>
-                    <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
-                </div>
-
-                <div *ngIf= 'quote.showDescription , let i= index'>
+                    <!-- <h4 id={{i}}>{{quote.quote}}</h4> -->
+                    
+                    <p appHighLight *ngIf="highestUpvote()===quote.upvote && quote.upvote>0">{{quote.quote}}</p>
+                    <p  *ngIf="highestUpvote()!==quote.upvote || quote.upvote===0">{{quote.quote}}</p>
+                    <button (click)='quoteLike(i)' class="btn btn-outline-success">Upvote</button>
+                    <button (click)='quoteUnlike(i)' class="btn btn-outline-primary">Downvote</button>
+                    <button (click)='toggleDetails(i)' class="btn btn-outline-warning">Toggle Details</button>
                     <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isDelete)='deleteQuote($event, i)'>
                     </app-quote-detail>
-                </div>
+                    <hr>
+                
 
+                <!-- <div *ngIf='quote.showDescription , let i= index'> -->
+
+                <!-- </div> -->
+            </div>
             </div>
         </div>
-        <app-quote-form (addQuote)= "addNewQuote($event)"></app-quote-form>
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
     <!-- </ul> -->
     <p *ngIf='quotes.length>0'>These are your quotes</p>

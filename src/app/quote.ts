@@ -1,8 +1,8 @@
 export class Quote {
     showDescription: boolean;
-    upvote:number;
-    downvote:number;
-constructor(public id:number, public name:string, public description:string, public completeDate: Date){
+    public upvote:number;
+    public downvote:number;
+constructor(public id:number, public quote:string, public author:string, public name,public completeDate: Date){
     this.showDescription=false;
     this.upvote=0;
     this.downvote=0;
