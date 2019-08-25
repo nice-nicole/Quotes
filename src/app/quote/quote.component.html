@@ -1,24 +1,26 @@
 <!-- <p>quote works!</p> -->
+<div class="title" style="text-align:center">
+    <h1>Quotes </h1>
+</div>
 <div class="container">
-    <!-- <h1>My Quotes</h1> -->
-    <!-- <hr> -->
-    <!-- <ul> -->
+
     <div class="row">
         <div class="col-md-6">
             <div *ngFor='let quote of quotes; let i = index'>
                 <div>
                     <!-- <h4 id={{i}}>{{quote.quote}}</h4> -->
-                    
+
                     <p appHighLight *ngIf="highestUpvote()===quote.upvote && quote.upvote>0">{{quote.quote}}</p>
-                    <p  *ngIf="highestUpvote()!==quote.upvote || quote.upvote===0">{{quote.quote}}</p>
+                    <p *ngIf="highestUpvote()!==quote.upvote || quote.upvote===0">" {{quote.quote}} "</p>
                     <button (click)='quoteLike(i)' class="btn btn-outline-success">Upvote {{quote.upvote}}</button>
-                    <button (click)='quoteUnlike(i)' class="btn btn-outline-primary">Downvote {{quote.downvote}}</button>
+                    <button (click)='quoteUnlike(i)' class="btn btn-outline-primary">Downvote
+                        {{quote.downvote}}</button>
                     <button (click)='toggleDetails(i)' class="btn btn-outline-warning">Toggle Details</button>
                     <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isDelete)='deleteQuote($event, i)'>
                     </app-quote-detail>
                     <hr>
-                
-            </div>
+
+                </div>
             </div>
         </div>
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
