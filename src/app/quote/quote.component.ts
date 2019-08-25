@@ -24,6 +24,23 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
+  addNewQuote(quote){
+    let quoteLength= this.quotes.length;
+    quote.id= quoteLength+1;
+    quote.completeDate = new Date(quote.completeDate);
+    this.quotes.push(quote);
+  }
+  // likeQuote(isLike, index){
+  //   if(isLike){
+  //     // quote.upvote +=1;
+  //     this.quotes[index].upvote +=1;
+  //   }
+
+  // }
+  // unlikeQuote(isUnlike, index){
+  //   quote.downvote+=1;
+  //   this.quotes.push(quote);
+  // }
   constructor() { }
 
   ngOnInit() {
