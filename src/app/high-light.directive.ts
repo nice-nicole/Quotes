@@ -8,9 +8,4 @@ export class HighLightDirective {
   constructor(elem:ElementRef) {
     elem.nativeElement.style.backgroundColor="lightgreen"
    }
-
-  // private textDeco(action:string){
-  //   this.elem.nativeElement.style.textDecoration=action;
-
-  // }
 }

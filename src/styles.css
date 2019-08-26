@@ -4,8 +4,6 @@
 
 body{
     font-family: 'Lobster', cursive;
-    /* background-color:#8B4513; */
-    /* color: #8B4513; */
 }
 input[type=text]{
     border: none;
@@ -17,14 +15,10 @@ input[type=text]{
 }
 .container{
     background-color: rgb(255, 255, 255);
-    /* margin-top:10%; */
-     height: 100%; 
-     /* box-shadow:0px 2px 4px 6px #8B4513, 0px 2px 4px 6px #8B4513 ; */
+     height: 100%;   
 }
 .title{
     color:#8B4513;
 }
-.title>img{
-    height: 5%;
-}
+
 
