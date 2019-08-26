@@ -10,7 +10,7 @@ export class QuoteComponent implements OnInit {
 
   quotes: Quote[]=[
     new Quote(1, "No matter what happens, move on", "Denzel Washington","Nicole",new Date(2019, 7, 23)),
-    new Quote(2, "L'humilitE prEcEde la gloire","Un sage que je connais pas","Nice",new Date(2019, 7, 23)),
+    new Quote(2, "Be the change that you wish to see in the world.","Mahatma Gandhi","Nice",new Date(2019, 7, 23)),
   ];
   toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
