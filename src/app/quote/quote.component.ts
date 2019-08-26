@@ -30,9 +30,9 @@ export class QuoteComponent implements OnInit {
     quote.completeDate = new Date(quote.completeDate);
     this.quotes.push(quote);
   }
-  preNum:number
-  lastNum:number
-  counter:number
+  min:number
+  max:number
+  i:number
 
   addQuote(emittedQuote){
     this.quotes.push(emittedQuote)
@@ -48,14 +48,14 @@ export class QuoteComponent implements OnInit {
   //   this.quotes.splice(i, 1)
   // }
   highestUpvote(){
-    this.preNum = 0
-    this.lastNum = 0
+    this.min = 0
+    this.max = 0
 
-    for(this.counter=0 ; this.counter < this.quotes.length; this.counter++) {
-      this.lastNum = this.quotes[this.counter].upvote;
-      if(this.lastNum > this.preNum){this.preNum = this.lastNum}
+    for(this.i=0 ; this.i < this.quotes.length; this.i++) {
+      this.min = this.quotes[this.i].upvote;
+      if(this.min > this.max){this.max= this.min}
     }
-    return  this.preNum
+    return  this.max
   }
   constructor() { }
 
