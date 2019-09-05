@@ -1,6 +1,6 @@
 # Quotes
 
-#### Quotes application generates quotes and helps to add new quotes. July,20th,2019
+#### Quotes application generates quotes and helps to add new quotes. August,20th,2019
 #### By Nice Nicole
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
